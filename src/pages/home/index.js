@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { Card, Form, Input, Typography, Button, Table, Space, Modal, Tag } from 'antd';
+import { Card, Form, Input, Typography, Button, Table, Space, Modal } from 'antd';
 import { SearchOutlined } from "@ant-design/icons";
-import { Link, useParams } from 'react-router-dom';
 import "./index.css";
 import Product from "../../data/mitrafor.json";
-
 
 class Home extends Component {
   constructor(props) {
@@ -15,7 +13,6 @@ class Home extends Component {
       selected: null,
       modal: false,
     }
-    // console.log(this.state.search);
 
     this.tableColumns = [
       {
@@ -40,7 +37,7 @@ class Home extends Component {
         key: 'id',
         render: (value, record) => 
         <Space>
-          <Button type='link' onClick={() => this.selectData(this.value)}>Detail</Button>
+          <Button type='link' onClick={() => {this.selectData(record)}}>Detail Product</Button>
         </Space >
       },
     ];
@@ -61,6 +58,21 @@ class Home extends Component {
         dataIndex: 'brand',
         key: 'brand',
       },
+      {
+        title: 'Category',
+        dataIndex: 'category',
+        key: 'category',
+      },
+      {
+        title: 'Size',
+        dataIndex: 'size',
+        key: 'size',
+      },
+      {
+        title: 'Color',
+        dataIndex: 'color',
+        key: 'color',
+      },
     ];
   }
 
@@ -72,9 +84,9 @@ class Home extends Component {
     this.setState({data: searchedData})
   }
 
-  selectData = (record) => {
+  selectData = (e) => {
     this.setState({ 
-      selected: record, 
+      selected: [e], 
       modal: true,
     })
   }
@@ -109,6 +121,7 @@ class Home extends Component {
         </Card>
 
         <Modal
+        width={700}
           title="Detail Product"
           visible={this.state.modal}
           onCancel={this.closeModal}
@@ -117,7 +130,7 @@ class Home extends Component {
         >
           <Table
             columns={this.modalColumns}
-            dataSource={this.state.data}
+            dataSource={this.state.selected}
             bordered
           />
         </Modal>
