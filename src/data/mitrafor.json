@@ -1,0 +1,121 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "sku": "FK50",
+            "name": "Fairgoods Kilburger50",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "XXL",
+            "color": "White"
+        },
+        {
+            "id": 2,
+            "sku": "FK49",
+            "name": "Fairgoods Kilburger49",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "XL",
+            "color": "Red"
+        },
+        {
+            "id": 3,
+            "sku": "FK48",
+            "name": "Fairgoods Kilburger48",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "L",
+            "color": "Black"
+        },
+        {
+            "id": 4,
+            "sku": "FK47",
+            "name": "Fairgoods Kilburger47",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "M",
+            "color": "Grey"
+        },
+        {
+            "id": 5,
+            "sku": "FK46",
+            "name": "Fairgoods Kilburger46",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "S",
+            "color": "Brown"
+        },
+        {
+            "id": 6,
+            "sku": "FK45",
+            "name": "Fairgoods Kilburger45",
+            "category": "Jacket",
+            "brand": "Fairgoods",
+            "size": "XS",
+            "color": "Orange"
+        },
+        {
+            "id": 7,
+            "sku": "EGBK",
+            "name": "Hilight Teddy Black Cap",
+            "category": "Polo Cap",
+            "brand": "EFG",
+            "size": "M",
+            "color": "Black"
+        },
+        {
+            "id": 8,
+            "sku": "EGBE",
+            "name": "Hilight Teddy Blue Cap",
+            "category": "Polo Cap",
+            "brand": "EFG",
+            "size": "M",
+            "color": "Blue"
+        },
+        {
+            "id": 9,
+            "sku": "EGGN",
+            "name": "Hilight H Green Cap",
+            "category": "Polo Cap",
+            "brand": "EFG",
+            "size": "L",
+            "color": "Green"
+        },
+        {
+            "id": 10,
+            "sku": "EGRD",
+            "name": "Hilight H Red Cap",
+            "category": "Polo Cap",
+            "brand": "EFG",
+            "size": "S",
+            "color": "Red"
+        },
+        {
+            "id": 11,
+            "sku": "JL0005213",
+            "name": "Mono Legacy Black Boardshort",
+            "category": "Boardshort",
+            "brand": "Booyah",
+            "size": "M",
+            "color": "Black"
+        },
+        {
+            "id": 12,
+            "sku": "JL0005214",
+            "name": "Mono Legacy Brown Boardshort",
+            "category": "Boardshort",
+            "brand": "Booyah",
+            "size": "M",
+            "color": "Brown"
+        },
+        {
+            "id": 13,
+            "sku": "JL0005215",
+            "name": "Mono Legacy White Boardshort",
+            "category": "Boardshort",
+            "brand": "Booyah",
+            "size": "M",
+            "color": "White"
+        }
+    ]
+}
