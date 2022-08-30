@@ -15,6 +15,7 @@ class Home extends Component {
       selected: null,
       modal: false,
     }
+    // console.log(this.state.search);
 
     this.tableColumns = [
       {
@@ -39,7 +40,7 @@ class Home extends Component {
         key: 'id',
         render: (value, record) => 
         <Space>
-          <Button type='link' onClick={() => this.selectData(record)}>Detail</Button>
+          <Button type='link' onClick={() => this.selectData(this.value)}>Detail</Button>
         </Space >
       },
     ];
@@ -63,10 +64,25 @@ class Home extends Component {
     ];
   }
 
+  submitFilter = (e) => {
+    const searchData = e.search
+    const searchedData = this.state.data.filter((item) => {
+      return Object.values(item).join("").toLowerCase().includes(searchData.toLowerCase())
+    })
+    this.setState({data: searchedData})
+  }
+
   selectData = (record) => {
     this.setState({ 
       selected: record, 
       modal: true,
+    })
+  }
+
+  closeModal = () => {
+    this.setState({ 
+      selected: null, 
+      modal: false,
     })
   }
 
@@ -76,7 +92,7 @@ class Home extends Component {
         <Typography.Title level={2}>Home</Typography.Title>
         <Card style={{marginBottom: 20}}>
           <Form 
-          // onFinish={submitFilter} 
+          onFinish={this.submitFilter} 
           layout='inline'>
             <Form.Item name="search">
               <Input placeholder='Search data..' suffix={<SearchOutlined />} />
@@ -95,7 +111,7 @@ class Home extends Component {
         <Modal
           title="Detail Product"
           visible={this.state.modal}
-          // onCancel={this.setState({modal: false})}
+          onCancel={this.closeModal}
           footer={false}
           maskClosable={false}
         >
