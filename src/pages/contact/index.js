@@ -1,35 +1,8 @@
 import React, { Component } from 'react';
-import { Typography, Card, Form, Input, Row, Space, Button, Image, Col } from 'antd'
-import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  DashboardOutlined,
-  DownOutlined,
-  HomeOutlined,
-  InboxOutlined,
-  PaperClipOutlined,
-  SendOutlined,
-  SettingOutlined,
-  TagOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import { NavLink, useLocation, Outlet } from "react-router-dom";
-// import "./index.css"
-
+import { Typography, Card, Form, Input, Row, Button, Image, Col } from 'antd'
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: ([])
-    }
-  }
-
-componentDidMount() {
-  
-}
-
-render() { 
+  render() { 
     return ( 
       <div>
         <Typography.Title level={2}>Contact</Typography.Title>
